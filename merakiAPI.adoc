@@ -11,8 +11,8 @@ The overall use case will follow this flow:
 1. Cisco DevNet sandbox reservation if you do not have your own Meraki environment to configure (optional)
 2. Cisco Meraki dashboard API Key generation to allow the provisioning from Ansible Automation Platform
 3. Configure GitHub Repo with the wireless settings
-4. Generate the PAT credentials from GitHub and establish the integration with Ansible Automation Platform
-5. Configure the Ansible Automation Platform project, template using the GitHub repo webhook
+4. Configure the Ansible Automation Platform project and template
+5. GitHub and Ansible Automation Platform integration
 6. Edit the wireless settings to observe an automatic trigger of the automation job
 ----
 
@@ -31,9 +31,9 @@ Once you login with your Cisco DevNet credentials, I am using my personal Google
 Wait around 5 minutes to get a confirmation mail with the credentials you will use to login into the https://n149.meraki.com[Cisco Meraki dashboard], you might get the username and will be asked to reset your password.
 Once you login with your Cisco DevNet credentials, I am using my personal Google account for this setup, you click on `Reserve` button and after you reconfirm the reservation, a Setup job will be triggered. Wait around 5 minutes to get a confirmation mail with the credentials that your will use to login into the https://n149.meraki.com[Cisco Meraki dashboard], you might get the username and will be asked to reset your password.
 
-When you connect into https://n149.meraki.com[Cisco Meraki dashboard] a anonymized network will be created with your mail, in my case the network name is: `DNSMB2-dxxxxxxxlgmail.com `
+When you connect into https://n149.meraki.com[Cisco Meraki dashboard] a anonymized network will be created with your mail, in my case the network name is: `DNSMB2-dxxxxxxxlgmail.com`
 
-=== Note
+==== Note
 
 The network generated automatically with your mail account as an input is the network that will give you writing access. Use that specific network for all this demo, and do not use a different one.
 
@@ -77,7 +77,8 @@ You can reach this configuration settings with two options:
 
 Once there click on `Generate new API key`. 
 
-=== Note
+==== Note
+
 Make sure you save the API key as it will be available for copy only once. When you finish click on `Done`button. 
 
 === User profile - API access - API keys
@@ -89,7 +90,64 @@ Once you generate at least one API key, you can generate additional ones, or `Re
 You can see that as part of the Sandbox enablement you will have SSID 1 configured, in my environment I have one SSID named: "DNSMB2 - wireless WiFi", you can manually disable the network, rename it, and also edit Access control configuration.
 After every change make sure to click on `Save Changes` button or `cancel`. 
 
+
 == Configure GitHub Repo with the wireless settings
+
+Login to https://github.com/[GitHub] with your credentials. 
+We are using this GitHub Repo as reference: https://github.com/pseguel-redhat/gitops_test.git[gitOps_test] you can Fork it to replicate this integration.
+
+In my example I alreayd forked the source https://github.com/dafmendo/gitops_test.git[here] and made few editions mostly on translation.
+Make sure after you fork to edit the `network_vars.yml` with the following settings:
+---
+Org_Name: DevNet Sandbox
+Net_Name: Your assigned Network Name from Meraki dashboard
+---
+
+In my example this would be:
+----
+Org_Name: DevNet Sandbox
+Net_Name: DNSMB2-dxxxxxxxlgmail.com
+----
+
+You should also edit the SSIDs in `network_vars.yml` for my example I will edit SSID 2 and SSID 4 and the playbook will look like this:
+----
+---
+Org_Name: DevNet Sandbox
+Net_Name: DNSMB2-dxxxxxxxlgmail.com
+SSID:
+  - name: MyCompany_customers
+    number: 2
+    enabled: no
+    auth_mode: psk
+    encryption_mode: wpa
+    psk: yourcustomerwifipass
+  - name: MyCompany_employees
+    number: 3
+    enabled: yes
+    auth_mode: psk
+    encryption_mode: wpa
+    psk: youremployeeswifipass
+----
+
+== Configure the Ansible Automation Platform project and template
+
+
+
+== GitHub and Ansible Automation Platform integration
+
+=== GitHub Repo - Settings
+
+Will allow you to edit the repo General settings, Access, Code and Automation, Security, Integrations configuration. 
+
+=== GitHub Repo - Settings - Code and Automation - Webhooks
+Webhooks allow external services to be notified when certain events happen. One example would be a configuration change, a push event, that can trigger an automation job using Ansible Automation Platform usending a POST request.
+To enable the Webhook click on `Add webhook` button.
+
+==== Note
+Depending on your security settings, the Webhook addition might require 2-step approvals.
+
+
+
 
 
 
