@@ -1,10 +1,10 @@
-= Podman Cheat Sheet
+= Edge branches automation with AAP and SD-WAN Meraki Cheat Sheet
 :experimental: true
 :product-name:
 
-This cheat sheet covers the commands used for working with https://developers.redhat.com/articles/2022/05/02/podman-basics-resources-beginners-and-experts[Podman], a popular tool for managing containers. Podman commands are mostly compatible with Docker. As stated on the https://podman.io[Podman landing page], "Podman is a daemonless, open source, Linux native tool designed to make it easy to find, run, build, share and deploy applications using Open Containers Initiative (OCI) Containers and Container Images."
+This cheat sheet covers the commands used for working with https://meraki.cisco.com[Cisco Meraki], one of the Cisco enterprise cloud managed networking solutions, a popular solution for managing access points, security appliances, L2 and L3 switches, and more. This cheatsheet will show how to use Automated NetOps through a GitHub integration with Ansible Automation Platform to manage the Meraki controlled devices configuration as code.
 
-Podman, unlike Docker, does not require a daemon running as superuser (root). This means that Podman interacts directly with the various components in the Linux container ecosystem instead of relying on a continuously running daemon to intermediate between these components on the caller's behalf. Podman does not run as root by default, which reduces the potential for a security hazard. Also, Podman does not spawn containers as child processes, thus making the containers it creates durable and independent of Podman.
+The steps configured here can be recreated using Cisco Devnet Sandbox Lab https://devnetsandbox.cisco.com/RM/Diagram/Index/aa48e6e2-3e59-4b87-bfe5-7833c45f8db8?diagramType=Topology[Meraki Small Business], which allows an 8 hr reservation by default, and after the reservation is ready it will allow you to get admin access to configure Wireless and networking for your specific settings.
 
 Overall, Podman is an https://developers.redhat.com/blog/2020/11/19/transitioning-from-docker-to-podman[excellent alternative] to Docker containers when you need increased security, unique identifier (UID) separation using namespaces, and integration with systemd.
 
