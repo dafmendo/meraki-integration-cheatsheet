@@ -27,6 +27,8 @@ The `$` symbol that proceeds commands in the examples represents the command lin
 == Cisco DevNet sandbox reservation (optional)
 For this cheatsheet we will use https://devnetsandbox.cisco.com/RM/Diagram/Index/aa48e6e2-3e59-4b87-bfe5-7833c45f8db8?diagramType=Topology[Meraki Small Business] as it will allow some specific provisioning tasks.
 
+!https://github.com/dafmendo/meraki-integration-cheatsheet/blob/a7f13a8d0e22060d05a2317572fd3f60dbb029ef/Screen%20Shot%202022-09-30%20at%2011.13.44.png["Sandbox reservation"]
+
 Once you login with your Cisco DevNet credentials, I am using my personal Google account for this setup, you click on `Reserve` button and after you reconfirm the reservation, a Setup job will be triggered. 
 Wait around 5 minutes to get a confirmation mail with the credentials you will use to login into the https://n149.meraki.com[Cisco Meraki dashboard], you might get the username and will be asked to reset your password.
 Once you login with your Cisco DevNet credentials, I am using my personal Google account for this setup, you click on `Reserve` button and after you reconfirm the reservation, a Setup job will be triggered. Wait around 5 minutes to get a confirmation mail with the credentials that your will use to login into the https://n149.meraki.com[Cisco Meraki dashboard], you might get the username and will be asked to reset your password.
