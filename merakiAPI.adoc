@@ -74,6 +74,8 @@ image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/9cdae8d424b
 
 Will show you two options: `Enable access to the Cisco Meraki Dashboard API` and if you click on the hyperlink `Profile` you can generate an API key to allows the configuration from Ansible Automation Platform.
 
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/0c96d9f67598b455e545673cc6644478537a7ee6/images/meraki-images/organization-dashboardapiaccess.png[Dashboard API access]
+
 === User profile - API access
 
 You can reach this configuration settings with two options: 
@@ -82,6 +84,7 @@ You can reach this configuration settings with two options:
 2. Selecting from the top right corner the User icon and clicking on it to select `My profile`and later `API access`.
 
 Once there click on `Generate new API key`. 
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/0c96d9f67598b455e545673cc6644478537a7ee6/images/meraki-images/api-access-key-generation.png[Generate new API key]
 
 ==== Note
 
@@ -90,6 +93,7 @@ Make sure you save the API key as it will be available for copy only once. When 
 === User profile - API access - API keys
 
 Once you generate at least one API key, you can generate additional ones, or `Revoke`specific API keys. As a general practice make sure to revoke API keys if you are not using them.
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/0c96d9f67598b455e545673cc6644478537a7ee6/images/meraki-images/api-keys.png[API keys]
 
 === Wireless - Configure - SSIDs
 
