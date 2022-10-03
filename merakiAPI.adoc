@@ -67,7 +67,7 @@ Allows you to edit configurations for the `Organization`, which by default will 
 *Example:*
 
 The following image shows the Organization configuration settings available: 
-
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/9cdae8d424baa08453fb2154483b678f2ca80b7c/images/meraki-images/organization-settings.png[Organization configuration settings]
 
 
 === Organization - Configure - Dashboard API access
