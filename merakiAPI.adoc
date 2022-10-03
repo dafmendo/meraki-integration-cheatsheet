@@ -97,7 +97,7 @@ image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/0c96d9f6759
 
 === Wireless - Configure - SSIDs
 
-You can see that as part of the Sandbox enablement you will have SSID 1 configured, in my environment I have one SSID named: "DNSMB2 - wireless WiFi", you can manually disable the network, rename it, and also edit Access control configuration.
+You can see that as part of the Sandbox enablement you will have SSID 1 configured, in my environment I have one SSID named: "DNSMB4 - wireless WiFi", you can manually disable the network, rename it, and also edit Access control configuration.
 After every change make sure to click on `Save Changes` button or `cancel`. 
 
 
@@ -116,14 +116,14 @@ Net_Name: Your assigned Network Name from Meraki dashboard
 In my example this would be:
 ----
 Org_Name: DevNet Sandbox
-Net_Name: DNSMB2-dxxxxxxxlgmail.com
+Net_Name: DNSMB4-dxxxxxlgmail.com
 ----
 
 You should also edit the SSIDs in `network_vars.yml` for my example I will edit SSID 2 and SSID 4 and the playbook will look like this:
 ----
 ---
 Org_Name: DevNet Sandbox
-Net_Name: DNSMB2-dxxxxxxxlgmail.com
+Net_Name: DNSMB4-dxxxxxlgmail.com
 SSID:
   - name: MyCompany_customers
     number: 2
@@ -141,8 +141,40 @@ SSID:
 
 == Configure the Ansible Automation Platform project and template
 
-=== Set up the execution environment including the Meraki collection
+=== Administration - Execution Environments
+Set up the execution environment including the Meraki collection
 image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/81a4cef28ddf5d8140ff5dbecf7f8f89c2b9d9e4/images/meraki-images/Administration-Execution%20Environments-meraki-ee.png[Meraki execution environment]
+
+=== Access - Organization
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/d220ab6fe7277221de92f64df3aa0073a9a353c4/images/meraki-images/Access-organizations.png[Organization ACME]
+
+=== Source Control credentials (optional)
+If you are using a private repository it will be needed to use a Source Control credential similar to this:
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/dc3d97075a1d5d8bba82c02dde086a0d92e50332/images/meraki-images/Source%20control%20cred.png[Source Control credentials]
+
+=== Administration - Credential Types (mandatory)
+In order to insert the Meraki API Key credential, you should create a new Credential Type from Administration - Credential Types, 
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/efad3df929526888384d7bddc0f190a3671f8e21/images/meraki-images/meraki-credential-type.png[New Meraki Credential Type]
+
+=== Resources - Credentials - Add
+After the `Meraki` Credential Type is created, you should configure the API Key that you created and copied from the Cisco Meraki Dashboard, as described in the picture below:
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/f15ac1ac689b6e669118512c4f8c0fa355563368/images/meraki-images/meraki-credential.png[Cisco Meraki API credential]
+
+=== Resources - Projects
+You must create a Project similar to the following:
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/f5a0daf6310f9bc10bd030c724701811cc4128c5/images/meraki-images/NetGitOps%20project.png[NetGitOps project]
+
+==== Note 
+The project is using as Source Control URL the GitHub repository we created in a previous step: https://github.com/dafmendo/gitops_ansible-sdwan
+Consider that for private repositories a Source Control credential should be created. 
+
+If you select the option "Update revision on launch" Ansible Automation Platform will automatically synch the project with the latest version of the GitHub repo to import the latest changes.
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/f5a0daf6310f9bc10bd030c724701811cc4128c5/images/meraki-images/Update%20on%20launch.png[Update revision on launch]
+
+=== Resources - Templates
+To create a Template in Ansible Automation Platform, select add Job Template:
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/dbe35a5e22ea900df7e28bed3e22c06af569d555/images/meraki-images/Add_job-template.png[Adding a Job Template]
+
 
 == GitHub and Ansible Automation Platform integration
 
