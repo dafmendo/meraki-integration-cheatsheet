@@ -141,7 +141,8 @@ SSID:
 
 == Configure the Ansible Automation Platform project and template
 
-
+=== Set up the execution environment including the Meraki collection
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/81a4cef28ddf5d8140ff5dbecf7f8f89c2b9d9e4/images/meraki-images/Administration-Execution%20Environments-meraki-ee.png[Meraki execution environment]
 
 == GitHub and Ansible Automation Platform integration
 
