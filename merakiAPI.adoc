@@ -57,13 +57,16 @@ The following image shows the Networks filtered:
 
 image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/d72a63f0efc695f21e21631fdb84700ea9d8dfcd/images/meraki-images/Organization-Networks.png[Networks available]
 
+And once you select your network, you will have access to specific sections:
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/0bb217483043a89015dd3d72a6dcfdc261e1bdb2/images/meraki-images/network-selected.png[Network]
+
 === Organization - Configure - Settings
 
 Allows you to edit configurations for the `Organization`, which by default will be named "DevNet Sandbox". Almost at the end of this page, you can find `Dashboard API access`. 
 
 *Example:*
 
-The following image shows the Organization settings available: 
+The following image shows the Organization configuration settings available: 
 
 
 
