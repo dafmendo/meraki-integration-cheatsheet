@@ -37,7 +37,7 @@ Wait around 5 minutes to get a confirmation mail with the credentials you will u
 
 
 
-When you connect into https://n149.meraki.com[Cisco Meraki dashboard] a anonymized network will be created with your mail, in my case the network name is: `DNSMB2-dxxxxxxxlgmail.com`
+When you connect into https://n149.meraki.com[Cisco Meraki dashboard] a anonymized network will be created with your mail, in my case the network name is: `DNSMB4-dxxxxxlgmail.com`
 
 ==== Note
 
@@ -46,29 +46,26 @@ The network generated automatically with your mail account as an input is the ne
 
 == Cisco Meraki dashboard steps
 
-=== Organization - Summary
+=== Organization - Monitor - Summary - Networks
 
-Shows all `Organization` settings, select `Networks` to view all Networks available for your `Organization`. 
-
-*Example:*
-
-The following image shows the Organization settings available: <<<<<<----
-
-=== Organization - Networks
-
+Shows all `Organization`, select `Summary` and scroll down to `Networks` to view all Networks available for your `Organization`.
 Shows all Organization `Networks`, click on your assigned `Network` to view the settings.
 
 *Example:*
 
-The following image shows the Networks available: <<<<<<----
+The following image shows the Networks filtered: 
 
-=== Organization - Configure
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/d72a63f0efc695f21e21631fdb84700ea9d8dfcd/images/meraki-images/Organization-Networks.png[Networks available]
+
+=== Organization - Configure - Settings
 
 Allows you to edit configurations for the `Organization`, which by default will be named "DevNet Sandbox". Almost at the end of this page, you can find `Dashboard API access`. 
 
 *Example:*
 
-The following image shows the Organization settings available: <<<<<<----
+The following image shows the Organization settings available: 
+
+
 
 === Organization - Configure - Dashboard API access
 
