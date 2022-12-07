@@ -139,7 +139,7 @@ SSID:
     psk: youremployeeswifipass
 ----
 
-== Configure the Ansible Automation Platform Organization, Project, Credentiasl and Execution Environment
+== Configure the Ansible Automation Platform Organization, Project, Credentials and Execution Environment
 
 === Administration - Execution Environments
 Set up the execution environment including the Meraki collection
