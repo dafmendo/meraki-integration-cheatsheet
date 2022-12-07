@@ -197,7 +197,7 @@ Add fill all the settings to use the Configure SSID playbook:
 image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/b742c45a837d1a251d3b252001d0e66c231ef5a3/images/meraki-images/configssid-template.png[Configure SSID template]
 
 Before you finish the edition, to enable a `Webhook`for the Job Template execution select the `Enable Webhook`checkbox:
-image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/d41c2f8e2559bcd4dbb4b4ecf4694b7b98882ecf/images/meraki-images/enablewebhook-Template.png
+
 image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/d41c2f8e2559bcd4dbb4b4ecf4694b7b98882ecf/images/meraki-images/enablewebhook-Template.png[Enable Webook]
 
 Choose `GitHub` as the webhook service, and a Webhook URL will be created (copy this URL as you will use it later to configure the WebHook from GitHub), you should also configure the `WebHook Credential`
