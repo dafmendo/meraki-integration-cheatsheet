@@ -27,7 +27,7 @@ The `$` symbol that proceeds commands in the examples represents the command lin
 == Cisco DevNet sandbox reservation (optional)
 For this cheatsheet we will use https://devnetsandbox.cisco.com/RM/Diagram/Index/aa48e6e2-3e59-4b87-bfe5-7833c45f8db8?diagramType=Topology[Meraki Small Business] as it will allow some specific provisioning tasks.
 
-image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/a5a1d5004397b7401af2465c1d7a4cad9f4a4cb8/images/meraki-images/sandox-reserve.png[Cisco Meraki Sandox Reservation from DevNet]
+image:https://github.com/dafmendo/meraki-integration-cheatsheet/blob/0d5cc31e3392cf5155a1381ec90c6eb1287aed10/images/meraki-images/sandbox-reserve.png[Cisco Meraki Sandox Reservation from DevNet]
 
 Once you login with your Cisco DevNet credentials, I am using my personal Google account for this setup, you click on `Reserve` button and after you reconfirm the reservation, a Setup job will be triggered. 
 
